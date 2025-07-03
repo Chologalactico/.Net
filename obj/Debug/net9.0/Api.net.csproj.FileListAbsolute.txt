@@ -30,3 +30,4 @@ C:\Users\galac\OneDrive\Documentos\.Net\Api.net\obj\Debug\net9.0\refint\Api.net.
 C:\Users\galac\OneDrive\Documentos\.Net\Api.net\obj\Debug\net9.0\Api.net.pdb
 C:\Users\galac\OneDrive\Documentos\.Net\Api.net\obj\Debug\net9.0\Api.net.genruntimeconfig.cache
 C:\Users\galac\OneDrive\Documentos\.Net\Api.net\obj\Debug\net9.0\ref\Api.net.dll
+C:\Users\galac\OneDrive\Documentos\.Net\Api.net\obj\Debug\net9.0\Api.net.sourcelink.json

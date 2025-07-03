@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Api.net.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")] //Ruta general de todos los endpoints
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
@@ -33,6 +33,8 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
+    [Route("Get/weatherforecast")]
+    [Route("[action]")] // este valor sirve para llamar el Get desde la ruta EJEMPLO: http://localhost:5240/api/weatherforecast/get
     public IEnumerable<WeatherForecast> Get()
     {
         return ListWeatherForecast;
