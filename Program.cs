@@ -16,8 +16,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors(); // Este nos permitira ver quien pueda usarla y quien no pueda usarla
+
 app.UseAuthorization();
 
-app.MapControllers();
+app.UseWelcomePage(); //Este es que da una pagina de bienvenida cada vez que se ingresa(Usarla mas si apenas se crea el proyecto )
+
+app.MapControllers(); //Siempre los middlewares perzonalisados deben ir entre el Autorization y los endpoints
 
 app.Run();
