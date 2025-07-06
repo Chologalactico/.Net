@@ -20,7 +20,8 @@ app.UseCors(); // Este nos permitira ver quien pueda usarla y quien no pueda usa
 
 app.UseAuthorization();
 
-app.UseWelcomePage(); //Este es que da una pagina de bienvenida cada vez que se ingresa(Usarla mas si apenas se crea el proyecto )
+//app.UseWelcomePage(); //Este es que da una pagina de bienvenida cada vez que se ingresa(Usarla mas si apenas se crea el proyecto )
+app.UseTimeMiddleware();//  Ya con esto usamos el middleware de Time
 
 app.MapControllers(); //Siempre los middlewares perzonalisados deben ir entre el Autorization y los endpoints
 
