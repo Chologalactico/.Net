@@ -5,6 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+// builder.Services.AddScoped();  // se crea una nueva isntancia de la dependencia pero a nivel de controlador o clase 
+builder.Services.AddScoped<IHelloWorldService, HelloWorldServices> ();
+// builder.Services.AddSingleton(); // se crea una unica instancia de esa dependencia a nivel de todo la Api "No recomendarlo hacerlo ay que maneja un unico estado "
 
 var app = builder.Build();
 
