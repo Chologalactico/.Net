@@ -1,4 +1,39 @@
 
+# Documentation for the .Net 
+
+Este es un proyecto de backend desarrollado en **ASP.NET Core**, que expone una API REST para aprender y exponer la funcionalidades de esta misma . Sigue principios de arquitectura limpia con controladores, servicios, middlewares y dependencias inyectadas.
+
+
+# Comandos Basicos 
+```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/tu-proyecto-dotnet-api.git
+
+cd tu-proyecto-dotnet-api
+
+# Restaurar dependencias
+dotnet restore
+
+# Compilar el proyecto
+dotnet build
+
+# Ejecutar la API
+dotnet run
+
+#Ejecutar pruebas
+dotnet test
+```
+## Controladores
+
+Ejemplo de uso en la carpeta Controller , *API.NET/Controllers/WeatherForecastController.cs*
+
+## Middlewares
+
+Ejemplo de uso en la carpeta Middlewares , *API.NET/Middlewares/TimeMiddlewares.cs*
+
+## Servicios
+
+Ejemplo de uso en la carpeta Middlewares , *API.NET/Service/HelloWord.cs* que a este es consumido por *API.NET/Controllers/HelloWordController.cs*
 
 
 ## Inyeccion de Dependencias 

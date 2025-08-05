@@ -5,6 +5,7 @@ namespace Api.net.Controllers;
 [Route("api/[controller]")] //Ruta general de todos los endpoints
 public class WeatherForecastController : ControllerBase
 {
+    //Lista de datos de prueba 
     private static readonly string[] Summaries = new[]
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -31,14 +32,18 @@ public class WeatherForecastController : ControllerBase
         }
     }
 
+
     [HttpGet(Name = "GetWeatherForecast")]
     [Route("Get/weatherforecast")]
     [Route("[action]")] // este valor sirve para llamar el Get desde la ruta EJEMPLO: http://localhost:5240/api/weatherforecast/get
+        // Llamado GET para mostrar todos los datos 
     public IEnumerable<WeatherForecast> Get()
     {
         return ListWeatherForecast;
     }
     [HttpPost]
+
+    //Llamado Post para introducir un nuevo User
     public IActionResult Post(WeatherForecast weatherForecast)
     {
         ListWeatherForecast.Add(weatherForecast);
