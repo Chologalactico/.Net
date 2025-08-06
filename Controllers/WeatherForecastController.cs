@@ -3,10 +3,11 @@ namespace Api.net.Controllers;
 
 [ApiController]
 [Route("api/[controller]")] //Ruta general de todos los endpoints
+//  Siempre en todos los arhcivos Poner la palabra Controller WeatherForecastController y heredar de ControllerBase
 public class WeatherForecastController : ControllerBase
 {
-    //Lista de datos de prueba 
     private static readonly string[] Summaries = new[]
+    //Coleccion de datos
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
@@ -15,6 +16,7 @@ public class WeatherForecastController : ControllerBase
 
     private static List<WeatherForecast> ListWeatherForecast = new List<WeatherForecast>();
 
+    //Logica de metodo Get 
     public WeatherForecastController(ILogger<WeatherForecastController> logger)
     {
         _logger = logger;
@@ -32,7 +34,7 @@ public class WeatherForecastController : ControllerBase
         }
     }
 
-
+    // Consumo de endpoint http://localhost:5240/api/weatherforecast/get
     [HttpGet(Name = "GetWeatherForecast")]
     [Route("Get/weatherforecast")]
     [Route("[action]")] // este valor sirve para llamar el Get desde la ruta EJEMPLO: http://localhost:5240/api/weatherforecast/get
